@@ -24,7 +24,7 @@ The password and the salt are entered into a standard hashing algorithm to produ
 We need to store this hash and the random salt into the database, so that we can check passwords against them in the future.
 For convenience, this program combines the salt and the hash into a single string, but you could store them separately.
 
-verify_password woukld be used when someone is logging in. We enter the password guess, and we will check it against the stored value.
+verify_password would be used when someone is logging in. We enter the password guess, and we will check it against the stored value.
 To do this, we get the salt we stored earlier (in this example it's the first 64 characters of the stored string) and generate a hash based on the new guess.
 If all is well, this should match the hash we got before.
 
