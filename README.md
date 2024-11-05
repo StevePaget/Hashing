@@ -18,7 +18,9 @@ Crucially, we can never reverse the process. A person who has the hash can not f
 In this program there are two functions:
 
 hash_password asks the user for a password. It then generates a random salt value https://auth0.com/blog/adding-salt-to-hashing-a-better-way-to-store-passwords/
+
 The password and the salt are entered into a standard hashing algorithm to produce a new hash.
+
 We need to store this hash and the random salt into the database, so that we can check passwords against them in the future.
 For convenience, this program combines the salt and the hash into a single string, but you could store them separately.
 
